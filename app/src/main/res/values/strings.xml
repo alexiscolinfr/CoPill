@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CoPill</string>
+    <string name="connexion_activity_name">Connexion</string>
+    <string name="login">Utilisateur :</string>
+    <string name="password">Mot de passe :</string>
+    <string name="sign_in">Se connecter</string>
+    <string name="sign_up">S\'inscrire</string>
 </resources>
