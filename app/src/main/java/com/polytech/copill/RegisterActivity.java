@@ -16,6 +16,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private String firstName,lastName,email,password;
     private Boolean isRegistered = false;
+    private int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +52,18 @@ public class RegisterActivity extends AppCompatActivity {
                 Connection con = connectionManager.createConnection();
                 Statement stmt1 = con.createStatement();
                 String query1 = "SELECT id FROM user WHERE email='"+email+"'";
-                final ResultSet rs = stmt1.executeQuery(query1);
+                final ResultSet rs1 = stmt1.executeQuery(query1);
 
-                if(!rs.next()){
+                if(!rs1.next()){
                     Statement stmt2 = con.createStatement();
                     String query2 = "INSERT INTO user VALUES (null, '"+firstName+"', '"+lastName+"', '"+email+"', '"+password+"')";
                     stmt2.executeUpdate(query2);
                     isRegistered=true;
+                    Statement stmt3 = con.createStatement();
+                    String query3 = "SELECT id FROM user WHERE email='"+email+"'";
+                    final ResultSet rs3 = stmt3.executeQuery(query3);
+                    rs3.next();
+                    id = rs3.getInt("id");
                 }
 
                 connectionManager.closeConnection();
@@ -73,6 +79,9 @@ public class RegisterActivity extends AppCompatActivity {
             if(isRegistered){
                 isRegistered=false;
                 Intent intent1 = new Intent(view.getContext(), HomeActivity.class);
+                intent1.putExtra("id", id);
+                intent1.putExtra("firstName", firstName);
+                intent1.putExtra("lastName", lastName);
                 startActivity(intent1);
             }
             else {

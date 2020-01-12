@@ -14,7 +14,8 @@ import java.sql.Statement;
 
 public class ConnexionActivity extends AppCompatActivity {
 
-    private String login,password;
+    private String login,password,firstName,lastName;
+    private int id;
     private Boolean isLogged = false;
 
     @Override
@@ -46,11 +47,14 @@ public class ConnexionActivity extends AppCompatActivity {
                 ConnectionManager connectionManager = new ConnectionManager();
                 Connection con = connectionManager.createConnection();
                 Statement stmt = con.createStatement();
-                String query = "SELECT id FROM user WHERE email='"+login+"' AND password='"+password+"'";
+                String query = "SELECT * FROM user WHERE email='"+login+"' AND password='"+password+"'";
                 final ResultSet rs = stmt.executeQuery(query);
 
                 if(rs.next()){
                     isLogged=true;
+                    id = rs.getInt("id");
+                    firstName = rs.getString("first_name");
+                    lastName = rs.getString("last_name");
                 }
 
                 connectionManager.closeConnection();
@@ -66,6 +70,9 @@ public class ConnexionActivity extends AppCompatActivity {
             if(isLogged){
                 isLogged=false;
                 Intent intent1 = new Intent(view.getContext(), HomeActivity.class);
+                intent1.putExtra("id", id);
+                intent1.putExtra("firstName", firstName);
+                intent1.putExtra("lastName", lastName);
                 startActivity(intent1);
             }
             else {
