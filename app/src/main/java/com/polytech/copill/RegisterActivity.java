@@ -95,7 +95,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                             publishProgress();
                             Statement stmt6 = con.createStatement();
-                            String query6 = "INSERT INTO register VALUES ('"+id+"', '"+pillCode+"', '"+dateString+"')";
+                            String query6 = "INSERT INTO register VALUES (null, '"+id+"', '"+pillCode+"', '"+dateString+"')";
                             stmt6.executeUpdate(query6);
 
                         }else {
