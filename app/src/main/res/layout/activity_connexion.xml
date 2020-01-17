@@ -27,7 +27,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/border"
+        android:background="@drawable/border1"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/button_signUp"
         app:layout_constraintEnd_toEndOf="parent"

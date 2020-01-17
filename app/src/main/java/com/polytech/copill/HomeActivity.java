@@ -32,8 +32,13 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void logout(View view){
-        Intent intent = new Intent(this, ConnexionActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intent);
+        Intent intent1 = new Intent(this, ConnexionActivity.class);
+        intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent1);
+    }
+
+    public void addNewPill(View view){
+        Intent intent2 = new Intent(this, AddPillActivity.class);
+        startActivity(intent2);
     }
 }

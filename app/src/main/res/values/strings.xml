@@ -12,4 +12,13 @@
     <string name="last_name">Nom :</string>
     <string name="email">Email :</string>
     <string name="pill_code">Code pilulier :</string>
+    <string name="monday">Lundi</string>
+    <string name="tuesday">Mardi</string>
+    <string name="wednesday">Mercredi</string>
+    <string name="thursday">Jeudi</string>
+    <string name="friday">Vendredi</string>
+    <string name="saturday">Samedi</string>
+    <string name="sunday">Dimanche</string>
+    <string name="add_pill">Ajouter un nouveau médicament</string>
+    <string name="save">Enregistrer</string>
 </resources>
