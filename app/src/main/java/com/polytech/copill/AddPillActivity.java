@@ -125,7 +125,7 @@ public class AddPillActivity extends AppCompatActivity {
         int q;
         q = Integer.parseInt((String)textViewQuantity.getText());
 
-        if(q < 25){
+        if(q < 10){
             q+=1;
             textViewQuantity.setText(String.valueOf(q));
         }else {
