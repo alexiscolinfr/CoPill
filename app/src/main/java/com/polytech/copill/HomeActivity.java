@@ -39,6 +39,7 @@ public class HomeActivity extends AppCompatActivity {
 
     public void addNewPill(View view){
         Intent intent2 = new Intent(this, AddPillActivity.class);
+        intent2.putExtra("id", id);
         startActivity(intent2);
     }
 }
