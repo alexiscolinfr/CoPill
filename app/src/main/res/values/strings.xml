@@ -4,6 +4,8 @@
     <string name="register_activity_name">Inscription</string>
     <string name="home_activity_name">Accueil</string>
     <string name="add_activity_name">Ajout médicament</string>
+    <string name="profil_activity_name">Mon profil</string>
+    <string name="details_activity_name">Détails</string>
     <string name="login">Utilisateur :</string>
     <string name="logout">Déconnexion</string>
     <string name="password">Mot de passe :</string>

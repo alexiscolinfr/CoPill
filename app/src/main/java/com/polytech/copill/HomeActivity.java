@@ -33,7 +33,7 @@ public class HomeActivity extends AppCompatActivity {
         textViewWelcomeMsg = (TextView)findViewById(R.id.textView_welcomeMessage);
         textViewTime = (TextView)findViewById(R.id.textView_time);
         textViewWelcomeMsg.setText("Bienvenue " + firstName + " " + lastName + " !");
-        textViewTime.setText(dateString);
+        textViewTime.setText("Date d'aujourd'hui : "+ dateString);
 
         textViewPCMonday = (TextView)findViewById(R.id.textView_pillCountMonday);
         textViewPCTuesday = (TextView)findViewById(R.id.textView_pillCountTuesday);
@@ -56,6 +56,43 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent2 = new Intent(this, AddPillActivity.class);
         intent2.putExtra("id", id);
         startActivity(intent2);
+    }
+
+    public void dayDetails(View view){
+        int day=0;
+        switch (view.getId()) {
+            case R.id.imageButton_mondayDetails:
+                day=1;
+                break;
+            case R.id.imageButton_tuesdayDetails:
+                day=2;
+                break;
+            case R.id.imageButton_wednesdayDetails:
+                day=3;
+                break;
+            case R.id.imageButton_thursdayDetails:
+                day=4;
+                break;
+            case R.id.imageButton_fridayDetails:
+                day=5;
+                break;
+            case R.id.imageButton_saturdayDetails:
+                day=6;
+                break;
+            case R.id.imageButton_sundayDetails:
+                day=7;
+                break;
+        }
+        Intent intent3 = new Intent(this, DayDetailsActivity.class);
+        intent3.putExtra("day", day);
+        intent3.putExtra("id", id);
+        startActivity(intent3);
+    }
+
+    public void openProfil(View view){
+        Intent intent4 = new Intent(this, ProfilActivity.class);
+        intent4.putExtra("id", id);
+        startActivity(intent4);
     }
 
     private class DataBaseConnection extends AsyncTask<Void,Void,Void> {
