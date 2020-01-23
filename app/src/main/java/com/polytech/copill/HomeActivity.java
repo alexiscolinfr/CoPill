@@ -17,7 +17,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private int id,sumPillsMonday,sumPillsTuesday,sumPillsWednesday,sumPillsThursday,sumPillsFriday,sumPillsSaturday,sumPillsSunday;
     private String firstName,lastName,dateString;
-    TextView textViewWelcomeMsg,textViewTime,textViewPCMonday,textViewPCTuesday,textViewPCWednesday,textViewPCThursday,textViewPCFriday,textViewPCSaturday,textViewPCSunday;
+    private TextView textViewWelcomeMsg,textViewTime,textViewPCMonday,textViewPCTuesday,textViewPCWednesday,textViewPCThursday,textViewPCFriday,textViewPCSaturday,textViewPCSunday;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

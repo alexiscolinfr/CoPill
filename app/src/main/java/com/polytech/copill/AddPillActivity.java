@@ -21,11 +21,11 @@ import java.util.Calendar;
 
 public class AddPillActivity extends AppCompatActivity {
 
-    Button buttonHour;
-    TextView textViewHour,textViewQuantity;
-    EditText editTextPillName;
-    CheckBox checkBoxMonday,checkBoxTuesday,checkBoxWednesday,checkBoxThursday,checkBoxFriday,checkBoxSaturday,checkBoxSunday;
-    ToggleButton toggleButtonNotification,toggleButtonAlarm,toggleButtonLight;
+    private Button buttonHour;
+    private TextView textViewHour,textViewQuantity;
+    private EditText editTextPillName;
+    private CheckBox checkBoxMonday,checkBoxTuesday,checkBoxWednesday,checkBoxThursday,checkBoxFriday,checkBoxSaturday,checkBoxSunday;
+    private ToggleButton toggleButtonNotification,toggleButtonAlarm,toggleButtonLight;
     private int id,quantity,notificationState,alarmState,lightState;
     private String pillName,hour,days;
     private Boolean isAdded = false;

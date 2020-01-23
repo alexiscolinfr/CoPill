@@ -8,7 +8,7 @@ import android.widget.TextView;
 public class DayDetailsActivity extends AppCompatActivity {
 
     private int day,id;
-    TextView textView_day;
+    private TextView textView_day;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
