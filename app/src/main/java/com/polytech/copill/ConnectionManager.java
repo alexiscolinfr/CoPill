@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class ConnectionManager {
 
     private final String driverName = "com.mysql.jdbc.Driver";
-    private final String connectionUrl = "jdbc:mysql://sql2.freesqldatabase.com:3306/sql2318902";
-    private final String userName = "sql2318902";
-    private final String userPass = "qQ3!hM3!";
+    private final String connectionUrl = "jdbc:mysql://remotemysql.com:3306/nJ0WpEGDZS";
+    private final String userName = "nJ0WpEGDZS";
+    private final String userPass = "N3VwWDg1hg";
 
     private Connection con = null;
 
