@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class ConnectionManager {
 
     private final String driverName = "com.mysql.jdbc.Driver";
-    private final String connectionUrl = "jdbc:mysql://remotemysql.com:3306/nJ0WpEGDZS";
-    private final String userName = "nJ0WpEGDZS";
-    private final String userPass = "N3VwWDg1hg";
+    private final String connectionUrl = "jdbc:mysql://db4free.net:3306/copill_db";
+    private final String userName = "miage2020";
+    private final String userPass = "k5HKw26D4x";
 
     private Connection con = null;
 
