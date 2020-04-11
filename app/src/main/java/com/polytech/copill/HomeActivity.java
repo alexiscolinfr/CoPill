@@ -59,28 +59,28 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void dayDetails(View view){
-        int day=0;
+        String day=null;
         switch (view.getId()) {
             case R.id.imageButton_mondayDetails:
-                day=1;
+                day="monday";
                 break;
             case R.id.imageButton_tuesdayDetails:
-                day=2;
+                day="tuesday";
                 break;
             case R.id.imageButton_wednesdayDetails:
-                day=3;
+                day="wednesday";
                 break;
             case R.id.imageButton_thursdayDetails:
-                day=4;
+                day="thursday";
                 break;
             case R.id.imageButton_fridayDetails:
-                day=5;
+                day="friday";
                 break;
             case R.id.imageButton_saturdayDetails:
-                day=6;
+                day="saturday";
                 break;
             case R.id.imageButton_sundayDetails:
-                day=7;
+                day="sunday";
                 break;
         }
         Intent intent3 = new Intent(this, DayDetailsActivity.class);
