@@ -2,11 +2,12 @@ package com.polytech.copill;
 
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -78,8 +79,6 @@ public class ProfilActivity extends AppCompatActivity {
             changeInformations=false;
             changePassword=false;
         }
-
-
     }
 
     private class DataBaseConnection extends AsyncTask<View,Void,View> {

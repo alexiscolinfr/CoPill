@@ -49,4 +49,6 @@
     <string name="confirm_password">Confirmer le mot de passe :</string>
     <string name="change_informations">Modifier mes informations</string>
     <string name="change_password">Changer de mot de passe</string>
+    <string name="notification_title">Vous avez un médicament à prendre !</string>
+    <string name="notification_channel_id">channel_01</string>
 </resources>
